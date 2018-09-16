@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @crew.name %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @crew.role %>
+</p>
+
+<p>
+  <strong>Movies:</strong>
+  <ul>
+    <% @crew.movies.each do |movie| %>
+      <li><%= movie.title %></li>
+    <% end %>
+  </ul>
+
+
+<%= link_to 'Back', crews_path %>
